@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wisdom Event Management Company</title>
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- Custom CSS File Link -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Swiper Slider CDN Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header Styles */
+        .modern-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-image {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: aliceblue;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem; /* Increased font size */
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #f0a500;
+        }
+
+        .nav-links li a:hover::after {
+            width: 100%; /* Full underline on hover */
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* Mobile Menu */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
+
+            .navbar {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: rgba(0, 0, 0, 0.9);
+                width: 200px;
+                flex-direction: column;
+                display: none;
+                padding: 1rem;
+                border-radius: 8px;
+            }
+
+            .navbar.active {
+                display: flex;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links li a {
+                font-size: 1.2rem;
+            }
+        }
+
+    </style>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "zQVbL0gZuklPPHUW8",
+            });
+        })();
+    </script>
+
+</head>
+<body>
+    <!-- <div class="top-bar"></div> -->
+    
+    <!-- Header Section -->
+    <header class="modern-header">
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <img src="./images/logo.webp" alt="Logo" class="logo-image">
+                <span class="logo-text">WISDOM EVENT MANAGEMENT</span>
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#service">SERVICES</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#price">PRICE</a></li>
+                <li><a href="#reviews">REVIEWS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div id="menu-bars" class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+<!-- header section ends here -->
+
+
+<!-- <section class="hero" id="home">
+    <div class="hero-section">
+        <div class="overlay"></div>
+        <div class="content">
+            <p class="tagline fade-in">Celebrating Six Years Of Excellence In Event Planning</p>
+            <h1 class="fade-in">WELCOME TO WISDOM EVENT MANAGEMENT</h1>
+        </div>
+    </div>
+</section> -->
+
+<section class="hero" id="home">
+     <!-- Video background -->
+    <video autoplay muted loop class="background-video">
+        <source src="./images/img-10.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-section">        
+        <!-- Overlay to blur the video -->
+        <div class="overlay"></div>
+        
+        <!-- Content on top of the video -->
+        <div class="content">
+            <p class="tagline fade-in">Celebrating Seven Years Of Excellence In Event Planning</p>
+            <h1 class="fade-in">WELCOME TO WISDOM EVENT MANAGEMENT</h1>
+        </div>
+    </div>
+</section>
+
+<!-- service section starts here -->
+<section class="service fade-in" id="service">
+    <h1 class="heading">Our <span>Services</span></h1>
+
+    <div class="box-container">
+        <div class="box fade-in">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Venue Selection</h3>
+            <p>We have a wide range of venues available for your event.</p>
+        </div>
+    
+        <div class="box fade-in">
+            <i class="fas fa-envelope"></i>
+            <h3>Invitation Card</h3>
+            <p>We have a wide range of invitation cards available for your event.</p>
+        </div>
+
+        <div class="box fade-in">
+            <i class="fas fa-music"></i>
+            <h3>Music Selection</h3>
+            <p>We have a wide range of music available for your event.</p>
+        </div>
+
+        <div class="box fade-in">
+            <i class="fas fa-cake-candles"></i>
+            <h3>Decoration</h3>
+            <p>We have a wide range of decorations available for your event.</p>
+        </div>
+
+        <div class="box fade-in">
+            <i class="fas fa-gift"></i>
+            <h3>Gifts</h3>
+            <p>We have a wide range of gifts available for your event.</p>
+        </div>
+
+        <div class="box fade-in">
+            <i class="fas fa-glass-cheers"></i>
+            <h3>Drinks</h3>
+            <p>We have a wide range of drinks available for your event.</p> 
+        </div>
+
+        <div class="box fade-in">
+            <i class="fas fa-utensils"></i>
+            <h3>Food</h3>
+            <p>We have a wide range of food available for your event.</p>
+        </div>
+        
+        <div class="box fade-in">
+            <i class="fas fa-dice"></i> <!-- Icon for games -->
+            <h3>Entertainment</h3>
+            <p>Enjoy thrilling games and magical performances</p>
+        </div>
+
+    </div>
+</section>
+<!-- service section ends here -->
+
+
+<!-- about section starts here -->
+<!-- <section class="about fade-in" id="about">
+    <h1 class="heading">About<span> Us</span></h1>
+
+    <div class="row">
+        <div class="image fade-in">
+            <img src="images/about-us.jpg" alt="">
+        </div>
+
+        <div class="content fade-in">
+            <h3>Why Choose Us?</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto nihil qui voluptatum ullam facere, aut esse voluptates eaque blanditiis ut dolore explicabo rerum, dolor consequuntur repellat fugit sed accusantium hic. Dolore autem facere placeat error doloremque eos mollitia sint optio eligendi? Placeat qui eum ipsa ea nemo dolor at totam quo hic ut ullam necessitatibus, aperiam cumque debitis temporibus fugiat obcaecati impedit? Id excepturi quisquam nostrum laborum. Sapiente velit magnam sequi nihil, dolores, officia voluptatem itaque placeat perspiciatis officiis saepe esse quos minus tempora at error. Dolorum asperiores dolore ratione magnam enim voluptatum quibusdam unde, veniam totam aspernatur beatae iusto.</p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae nihil blanditiis cum? Voluptates nesciunt aliquid natus, deleniti culpa magni cupiditate facere eos unde tempora sequi non sit hic blanditiis vitae reprehenderit qui, ex, inventore quia temporibus maxime magnam ipsam! Voluptate architecto modi debitis libero ducimus cum magnam id, eligendi perferendis.</p>
+
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+    </div>
+
+</section> -->
+
+<section class="about fade-in" id="about">
+    <h1 class="heading">About<span> Us</span></h1>
+
+    <div class="row">
+        <div class="image fade-in">
+            <img src="images/about-us.jpg" alt="About Us">
+        </div>
+
+        <div class="content fade-in">
+            <h3>Why Choose Us?</h3>
+            <p>At <strong>The Wisdom Event Management</strong>, we bring <strong>7 years of expertise</strong> to create unforgettable memories for every occasion. From intimate <strong>indoor gatherings</strong> to grand <strong>outdoor celebrations</strong>, we specialize in crafting events that are as unique as you are.</p>
+
+            <p>Our expertise spans across a variety of events, including:  
+            <ul>
+                <li>Baby Showers</li>
+                <li>Haldi, Sangeet, Pre-Wedding & Post-Wedding Celebrations</li>
+                <li>Birthday Parties</li>
+                <li>Corporate Events</li>
+                <li>Family Get-Togethers and More</li>
+            </ul>
+            </p>
+
+            <p>We pride ourselves on offering <strong>all-inclusive packages</strong> that cover every detail to make your event stress-free and extraordinary:</p>
+            <ul>
+                <li>Custom Decorations tailored to your theme</li>
+                <li>Delicious Food Buffets & Catering with diverse cuisines</li>
+                <li>Live Concerts for electrifying entertainment</li>
+                <li>Kids Engagement Activities to keep little ones delighted</li>
+            </ul>
+
+            <p>Whether it’s an elegant wedding, a vibrant birthday bash, or a formal corporate gathering, <strong>The Wisdom Event Management</strong> is your trusted partner to bring your vision to life. Let us create the celebration you’ve always dreamed of!</p>
+
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- about section ends here -->
+
+<!-- gallery section starts here -->
+<section class="gallery fade-in" id="gallery">
+    <h1 class="heading">Our <span>Gallery</span></h1>
+
+    <div class="box-container">
+        <!-- Repeat this block for more images -->
+        <!-- <div class="box">
+            <div class="image fade-in">
+                <img src="https://i.pinimg.com/originals/cb/28/86/cb2886202fdaf197b2459e9ffcba4917.jpg" alt="Event Image 1">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="https://i.pinimg.com/originals/34/3f/8b/343f8bde1efeaa2616355623726c3cb0.jpg" alt="Event Image 2">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="http://ohhmymy.com/wp-content/uploads/2015/09/indian-wedding-door-decorations.jpg" alt="Event Image 3">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="http://2.bp.blogspot.com/-d-hAnKJbOJ8/USqJ4gSU8xI/AAAAAAAAAXQ/RACDFbSEA7M/s1600/marriage+decoration.jpg" alt="Event Image 4">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="http://3.bp.blogspot.com/-01tqxDG9QPg/UICbsC51FTI/AAAAAAAACBU/X1WHNpOZs7M/s1600/wedding-2.jpg" alt="Event Image 4">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="https://i.pinimg.com/originals/16/ad/d4/16add425abbdf01ff70eb9baede82fdb.jpg" alt="Event Image 4">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="https://i.pinimg.com/originals/80/e1/12/80e112ea4d17ce6cea3ae600c8f2750e.jpg" alt="Event Image 4">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="https://i.pinimg.com/originals/1a/dd/20/1add2076af5e2b3573182d3dbc411cfc.jpg" alt="Event Image 4">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="https://i.pinimg.com/originals/7c/8f/a0/7c8fa0b6e44fc53460c297195a37811e.jpg" alt="Event Image 4">
+            </div>
+        </div> -->
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="./images/img-22.jpg" alt="Event Image 1">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="./images/img-21.jpg" alt="Event Image 2">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="./images/img-19.webp" alt="Event Image 3">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="./images/img-2.png" alt="Event Image 4">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="./images/img-17.jpg" alt="Event Image 5">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="./images/img-16.jpg" alt="Event Image 6">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="./images/img-15.jpg" alt="Event Image 7">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="./images/img-8.jpg" alt="Event Image 8">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="./images/img-9.jpg" alt="Event Image 9">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="./images/img-14.jpg" alt="Event Image 10">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="./images/img-11.jpg" alt="Event Image 11">
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image fade-in">
+                <img src="./images/img-24.png" alt="Event Image 12">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- gallery section ends here -->
+
+
+ <!-- Price Section -->
+ <section class="price fade-in" id="price">
+    <h1 class="heading">Pricing <span>Plans</span></h1>
+
+    <div class="box-container">
+        <!-- Card 1 -->
+        <div class="box fade-in">
+            <div class="card">
+                <div class="front">
+                    <img src="images/event-img-4.jpg" alt="Birthday Plan">
+                    <h3 class="title">For Birthday</h3>
+
+                    <div class="info">
+                        <p class="tagline">Celebrate your special day in style!</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Perfect decorations for all age groups </li>
+                            <li><i class="fas fa-check"></i> Memorable music and photo moments </li>
+                            <li><i class="fas fa-check"></i> Delicious custom-designed cakes </li>
+                            <li><i class="fas fa-check"></i> A fun-filled experience for your guests </li>
+                        </ul>
+                    </div>
+                    <h4 style="color: #f0a500;">click or hover</h4>
+                </div>
+                <div class="back">
+                    <h3 class="title">For Birthday</h3>
+                    <div class="price"><i class="fas fa-indian-rupee-sign"></i> 65,000</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Custom themes & decorations</li>
+                        <li><i class="fas fa-check"></i> Event coordination & management</li>
+                        <li><i class="fas fa-check"></i> Personalized party favors</li>
+                        <li><i class="fas fa-check"></i> Custom cakes & dessert tables</li>
+                        <li><i class="fas fa-check"></i> Entertainment (DJs, games, etc.)</li>
+                        <li><i class="fas fa-check"></i> Venue setup & design</li>
+                        <li><i class="fas fa-check"></i> Photography & videography</li>
+                    </ul>
+                    <a href="#contact" class="btn">For more services, Click here</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="box fade-in">
+            <div class="card">
+                <div class="front">
+                    <img src="images/event-img-1.jpg" alt="Wedding Plan">
+                    <h3 class="title">For Wedding</h3>
+
+                    <div class="info">
+                        <p class="tagline">Create memories that last a lifetime</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Elegant floral and light decorations</li>
+                            <li><i class="fas fa-check"></i> Premium catering for every taste </li>
+                            <li><i class="fas fa-check"></i> Live music and customized playlists </li>
+                            <li><i class="fas fa-check"></i> Dedicated event management for a seamless experience </li>
+                        </ul>
+                    </div>
+                    <h4 style="color: #f0a500;">click or hover</h4>
+                </div>
+                <div class="back">
+                    <h3 class="title">For Wedding</h3>
+                    <div class="price"><i class="fas fa-indian-rupee-sign"></i> 80,000</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Full wedding planning & coordination</li>
+                        <li><i class="fas fa-check"></i> Custom wedding themes & decorations</li>
+                        <li><i class="fas fa-check"></i> Bridal & groom styling</li>
+                        <li><i class="fas fa-check"></i> Floral arrangements & bouquets</li>
+                        <li><i class="fas fa-check"></i> Catering & wedding cakes</li>
+                        <li><i class="fas fa-check"></i> Entertainment (Bands, DJs, etc.)</li>
+                        <li><i class="fas fa-check"></i> Photography & videography</li>
+                        <li><i class="fas fa-check"></i> Venue selection & setup</li>
+                        <li><i class="fas fa-check"></i> Rentals (Furniture, Tents, AV Equipment)</li>
+                    </ul>
+                    <a href="#contact" class="btn">For more services, Click here</a>
+                </div>
+            </div>
+        </div>
+
+    
+        <!-- Card 3 -->
+        <div class="box fade-in">
+            <div class="card">
+                <div class="front">
+                    <img src="./images/event-img-5.webp" alt="Haldi Plan">
+                    <h3 class="title">For Anniversary</h3>
+                    <div class="info">
+                        <p class="tagline">Relive your love story!</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Romantic ambiance with candlelight settings </li>
+                            <li><i class="fas fa-check"></i> Customized menu to suit your taste </li>
+                            <li><i class="fas fa-check"></i> Music, dance, and an unforgettable cake cutting </li>
+                            <li><i class="fas fa-check"></i> Professional photographers to capture every emotion </li>
+                        </ul>
+                    </div>
+                    <h4 style="color: #f0a500;">click or hover</h4>
+                </div>
+
+                <div class="back">
+                    <h3 class="title">For Anniversary</h3>
+                    <div class="price"><i class="fas fa-indian-rupee-sign"></i> 70,000</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Anniversary party planning & coordination</li>
+                        <li><i class="fas fa-check"></i> Custom themes & decorations</li>
+                        <li><i class="fas fa-check"></i> Vow renewal ceremonies</li>
+                        <li><i class="fas fa-check"></i> Catering & anniversary cakes</li>
+                        <li><i class="fas fa-check"></i> Live entertainment (Bands, DJs, etc.)</li>
+                        <li><i class="fas fa-check"></i> Photography & videography</li>
+                        <li><i class="fas fa-check"></i> Venue selection & setup</li>
+                        <li><i class="fas fa-check"></i> Personalized gifts & keepsakes</li>
+                    </ul>
+                    <a href="#contact" class="btn">For more services, Click here</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more cards as needed -->
+
+        <!-- Card 4 -->
+        <div class="box fade-in">
+            <div class="card">
+                <div class="front">
+                    <img src="./images/event-img-2.jpg" alt="Haldi Plan">
+                    <h3 class="title">For Haldi and Sangeet</h3>
+                    <div class="info">
+                        <p class="tagline">Celebrate the traditional rituals!</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Floral decorations & traditional setup</li>
+                            <li><i class="fas fa-check"></i> Authentic snacks & drinks</li>
+                            <li><i class="fas fa-check"></i> Live music or soothing tunes</li>
+                            <li><i class="fas fa-check"></i> Professional photography</li>
+                        </ul>
+                    </div>
+                    <h4 style="color: #f0a500;">click or hover</h4>
+                </div>
+
+                <div class="back">
+                    <h3 class="title">For Haldi and Sangeet</h3>
+                    <div class="price"><i class="fas fa-indian-rupee-sign"></i> 60,000</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Custom themes & decorations</li>
+                        <li><i class="fas fa-check"></i> Sangeet theme & decoration</li>
+                        <li><i class="fas fa-check"></i> Dance floor setup with lighting</li>
+                        <li><i class="fas fa-check"></i>Venue selection & setup</li>
+                        <li><i class="fas fa-check"></i>Catering for traditional snacks & drinks</li>
+                        <li><i class="fas fa-check"></i>Photography & videography services</li>
+                        <li><i class="fas fa-check"></i>Customized Haldi packages & gift bags</li>
+                    </ul>
+                    <p></p>
+                    <a href="#contact" class="btn">For more services, Click here</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Price Section Ends -->
+
+
+<!-- Review Section -->
+<section class="review fade-in" id="reviews">
+    <h1 class="heading">Client's <span>Review</span></h1>
+    <div class="review-wrapper">
+        <!-- Review 1 -->
+        <div class="review-box fade-in">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="user">
+                <img src="images/event-img-1.jpg" alt="User">
+                <div class="user-info">
+                    <h3>John Smith</h3>
+                    <span>Wedding Client</span>
+                </div>
+            </div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="review-text">"Wisdom Event Management handled our wedding beautifully. From decor to timelines, everything was seamless. Highly recommend their services!"</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-box fade-in">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="user">
+                <img src="images/event-img-2.jpg" alt="User">
+                <div class="user-info">
+                    <h3>Sarah Thompson</h3>
+                    <span>Corporate Client</span>
+                </div>
+            </div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"Their team executed our corporate event flawlessly. Great planning, fantastic setup, and a smooth experience overall."</p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-box fade-in">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="user">
+                <img src="images/event-img-3.jpg" alt="User">
+                <div class="user-info">
+                    <h3>Emily Johnson</h3>
+                    <span>Birthday Client</span>
+                </div>
+            </div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"They organized my son's birthday party perfectly! Stress-free planning and a fantastic celebration for all our guests."</p>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="review-box fade-in">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="user">
+                <img src="images/event-img-4.jpg" alt="User">
+                <div class="user-info">
+                    <h3>Michael Brown</h3>
+                    <span>Launch Event Client</span>
+                </div>
+            </div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"Our product launch was a huge success thanks to Wisdom Event Management. A very professional and reliable team!"</p>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="review-box fade-in">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="user">
+                <img src="images/slide-img-8.jpg" alt="User">
+                <div class="user-info">
+                    <h3>Laura Wilson</h3>
+                    <span>Anniversary Client</span>
+                </div>
+            </div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="review-text">"Our anniversary party was magical. The attention to detail and beautiful decor made it a night to remember!"</p>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="review-box fade-in">
+            <i class="fas fa-quote-right quote-icon"></i>
+            <div class="user">
+                <img src="images/slide-img-7.jpg" alt="User">
+                <div class="user-info">
+                    <h3>David Miller</h3>
+                    <span>Conference Client</span>
+                </div>
+            </div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"They managed our annual conference perfectly. The setup, audio-visuals, and coordination were all top-notch!"</p>
+        </div>
+    </div>
+</section>
+<!-- Review Section Ends -->
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact fade-in">
+    <div class="contact-container">
+        <h1 class="heading">Contact <span>Us</span></h1>
+        <p class="sub-heading">We'd love to hear from you. Feel free to reach out!</p>
+
+        <!-- Contact Form and Google Map (2-column layout) -->
+        <div class="contact-content">
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Your Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" placeholder="Write your message here" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+            
+            <!-- Google Map Section -->
+            <div class="map-container">
+                <h2>Our Location</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.575024716998!2d73.77411491472878!3d18.630877287247343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdeddbab28df975%3A0x6b02d865ce6791a1!2sDange%20Chowk%2C%20Onkar%20Colony%2C%20Yashoda%20Colony%2C%20Thergaon%2C%20Pune%2C%20Pimpri-Chinchwad%2C%20Maharashtra%20411033!5e0!3m2!1sen!2sin!4v1671210293351!5m2!1sen!2sin" 
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<section class="footer fade-in">
+    <div class="box-container">
+
+        <!-- Logo and Intro -->
+        <div class="box">
+            <a href="#" class="logo">
+                <img src="./images/logo.webp" alt="WISDOM EVENT MANAGEMENT Logo" class="logo">
+                <span class="logo-text">WISDOM EVENT MANAGEMENT</span>
+            </a>
+            <p>For the past six years, Wisdom Event Management has been dedicated to serving businesses with unparalleled expertise and creativity.</p>
+        </div>
+
+        <!-- Important Links -->
+        <div class="box">
+            <h3>Important Links</h3>
+            <a href="#home"> <i class="fas fa-chevron-right"></i> Home</a>
+            <a href="#about"> <i class="fas fa-chevron-right"></i> About</a>
+            <a href="#service"> <i class="fas fa-chevron-right"></i> Services</a>
+            <a href="#gallery"> <i class="fas fa-chevron-right"></i> Gallery</a>
+            <a href="#price"> <i class="fas fa-chevron-right"></i> Price</a>
+            <a href="#reviews"> <i class="fas fa-chevron-right"></i> Reviews</a>
+            <a href="#contact"> <i class="fas fa-chevron-right"></i> Contact</a>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="box">
+            <h3>Contact Info</h3>
+            <a href="tel:+919209251938"> <i class="fas fa-phone"></i> +91 92092 51938</a>
+            <a href="tel:+918149115766"> <i class="fas fa-phone"></i> +91 81491 15766</a>
+            <a href="mailto:wisdomevents@gmail.com"> <i class="fas fa-envelope"></i> wisdomevents@gmail.com</a>
+            <a href="https://www.google.com/maps?q=Dange+Chowk,+Onkar+Colony,+Yashoda+Colony,+Thergaon,+Pune,+Pimpri-Chinchwad,+Maharashtra+411033" target="_blank"> 
+                <i class="fas fa-map-marker-alt"></i> Dange Chowk, Onkar Colony, Yashoda Colony, Thergaon, Pune, Pimpri-Chinchwad, Maharashtra 411033
+            </a>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="box">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com" target="_blank"> <i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://www.twitter.com" target="_blank"> <i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://www.instagram.com/wisdomeventmanagement/profilecard/?igsh=MXNqeGl3NWtqNGZmYQ==" target="_blank"> <i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://www.linkedin.com" target="_blank"> <i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://www.youtube.com" target="_blank"> <i class="fab fa-youtube"></i> YouTube</a>
+        </div>
+    </div>
+
+    <!-- Credit Section -->
+    <div class="credit">
+        <!-- &copy; Created by <span>Rahul Sangwan</span> 🔥🥰 | All rights reserved. -->
+        <p>&copy; 2024 wisdom Event Management. All Rights Reserved.</p>
+    </div>
+
+</section>
+
+    <!-- Swiper Slider CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JS File Link -->
+    <script src="js/script.js"></script>
+</body>
+</html>
