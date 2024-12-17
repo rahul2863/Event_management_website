@@ -76,7 +76,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
     // Send email via EmailJS
     try {
-        const response = await emailjs.send("service_7yufnup", "template_n3nklrc", {
+        const response = await emailjs.send("service_m2e5vso", "template_n3nklrc", {
             name,
             email,
             phone,
@@ -134,3 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     boxes.forEach(box => observer.observe(box));
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const video = document.querySelector(".background-video");
+    video.playbackRate = 0.7; // Adjust playback speed (0.5 is half the normal speed)
+});
