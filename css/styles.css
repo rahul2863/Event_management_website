@@ -101,7 +101,7 @@ section .box-container h3{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    /* height: 100; */
     background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
 }
 
@@ -123,6 +123,17 @@ section .box-container h3{
     font-weight: bold;
     letter-spacing: 2px;
     font-family: "Ovo", serif;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    z-index: -2; /* Keeps video behind content */
+    filter: blur(8px); /* Adds a blur effect to the video */
 }
 
 
@@ -354,6 +365,31 @@ section .box-container h3{
     color: #fff;
     transform: scale(1.05);
 }
+
+.about .row .content ul {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove left padding */
+    margin-top: 1rem;
+}
+
+.about .row .content ul li {
+    font-size: 1.6rem; /* Adjust font size */
+    color: #666; /* Use the same color as the paragraph text */
+    line-height: 2; /* Improve readability */
+    margin-bottom: 0.8rem; /* Add spacing between list items */
+    display: flex;
+    align-items: center; /* Align text and icon */
+    gap: 1rem; /* Add spacing between icon and text */
+}
+
+.about .row .content ul li::before {
+    content: '\f00c'; /* Font Awesome checkmark icon */
+    font-family: 'Font Awesome 5 Free'; /* Use Font Awesome */
+    font-weight: 900;
+    color: var(--main-color, #ff6b6b); /* Match the button color */
+    font-size: 1.4rem;
+}
+
 
 
 /* Gallery Section Styling */
